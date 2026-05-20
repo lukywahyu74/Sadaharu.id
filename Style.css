@@ -1,0 +1,77 @@
+/* ========= Kustom CSS (dipisah dari index.html) ========= */
+
+/* Glassmorphism Transparan pada Floating Navbar */
+.glass-navbar {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.01) 100%
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Modifikasi scrollbar agar sesuai estetika gelap */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #052b79;
+}
+::-webkit-scrollbar-thumb {
+  background: #305be9;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+}
+
+/* Desain lengkungan kustom modern di sisi kanan hero section */
+.clip-path-hero {
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* Custom Scroll progress bar */
+#progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  z-index: 100;
+  background: transparent;
+}
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  transition: width 0.1s ease-out;
+}
+
+/* Lenis smooth scroll fix */
+html.lenis {
+  height: auto;
+}
+.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis-smooth [data-aos] {
+  transition-property: opacity, transform;
+}
+
+/* Cursor Glow Effect */
+#cursor-glow {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.08) 0%,
+    rgba(139, 92, 246, 0.03) 50%,
+    transparent 100%
+  );
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.3s,
+    height 0.3s;
+}
