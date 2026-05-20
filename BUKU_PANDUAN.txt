@@ -1,0 +1,124 @@
+BUKU PANDUAN EDIT MUDAH (Sadaharu.id - versi 3 file)
+
+Folder saat ini berisi:
+- index.html
+- style.css
+- javascript.js
+
+========================================
+A. CARA EDIT LINK WA & SOSMED (paling mudah)
+========================================
+Semua link WA & sosial media dibuat dari file:
+- javascript.js
+
+Buka: javascript.js
+Lalu edit bagian ini:
+
+1) WA (nomor bisnis)
+Cari:
+  const COMPANY_WHATSAPP = "...";
+Ubah ke nomor WA kamu (angka saja).
+Contoh sesuai request kamu:
+  const COMPANY_WHATSAPP = "081358124491";
+
+2) Email (untuk section Kontak + mailto)
+Cari:
+  const COMPANY_EMAIL = "...";
+Ubah ke email kamu.
+Contoh:
+  const COMPANY_EMAIL = "lukywahyu74@gmail.com";
+
+3) Sosmed:
+Cari:
+  const INSTAGRAM_URL = "...";
+  const LINKEDIN_URL  = "...";
+Ganti URL sesuai profil kamu.
+
+Catatan:
+- Button WA di HTML pakai id berikut, dan akan otomatis diarahkan sesuai COMPANY_WHATSAPP:
+  - layanan: wa-btn-web-dev, wa-btn-app-dev, wa-btn-uiux-design
+  - kemitraan: wa-partner-developer, wa-partner-reseller
+
+========================================
+B. CARA EDIT FOTO PERUSAHAAN & FOTO FOUNDER
+========================================
+Semua link foto ditangani dari javascript.js
+
+1) Foto Perusahaan (yang ada id="company-main-photo")
+Cari di javascript.js:
+  const COMPANY_PHOTO_URL = "...";
+Ubah URL menjadi foto perusahaan kamu.
+ID target di HTML:
+  id="company-main-photo"
+
+2) Foto Founder (yang ada id="company-founder-photo")
+Cari di javascript.js:
+  const FOUNDER_PHOTO_URL = "...";
+Ubah URL menjadi foto founder kamu.
+ID target di HTML:
+  id="company-founder-photo"
+
+========================================
+C. CARA EDIT LINK WA CEPAT (tombol layanan & kemitraan)
+========================================
+Kalau kamu ingin ganti pesan WA (teks yang muncul di chat WA), edit di javascript.js.
+
+Cari 3 bagian berikut:
+1) Custom Web Development
+  wa-btn-web-dev
+2) Mobile App Engineering
+  wa-btn-app-dev
+3) Premium UI/UX Design
+  wa-btn-uiux-design
+
+Contoh: cari baris yang mengandung:
+  document.getElementById("wa-btn-web-dev").href = `https://wa.me/${COMPANY_WHATSAPP}?text=...`;
+Ubah parameter text=... sesuai kebutuhan.
+
+Untuk kemitraan:
+- wa-partner-developer
+- wa-partner-reseller
+
+========================================
+D. CARA EDIT LINK GDRIVE PROPOSAL MITRA
+========================================
+Link Gdrive ditangani dari HTML, tapi juga bisa diubah dari javascript.js.
+
+Di index.html ada:
+  id="gdrive-proposal-link"
+  href="https://drive.google.com"
+
+Kalau ingin ubah via JS:
+Buka javascript.js
+Cari:
+  const GDRIVE_PROPOSAL_LINK = "...";
+Ubah linknya.
+
+========================================
+E. CARA EDIT EMAIL & WA DI SECTION KONTak
+========================================
+Saat ini email & WA juga tampil langsung di index.html (tag href).
+Namun agar konsisten (sekalian otomatis), update juga dari javascript.js bagian:
+- COMPANY_EMAIL
+- COMPANY_WHATSAPP
+
+Target id di index.html:
+- id="company-email"  (mailto:...)
+- id="company-whatsapp" (https://wa.me/...)
+
+========================================
+F. CARA EDIT DETAIL LAINNYA (judul, teks, konten)
+========================================
+Silakan edit di index.html.
+Bagian penting:
+- Layanan: section id="layanan"
+- Kerja Sama: section id="kerjasama"
+- Kontak: section id="kontak"
+
+========================================
+G. CATATAN PENTING
+========================================
+- javascript.js mengandalkan ID elemen tertentu. Jangan ganti id kecuali paham.
+- Untuk foto, cukup ganti URL di javascript.js.
+
+Selesai.
